@@ -13,8 +13,7 @@ Before you start, please follow these steps:
 - Create a new branch:  
 git checkout -b feature-name
 
-- Make changes and commit:
-
+- Make changes and commit: 
 git commit -m "Add: your clear, meaningful message"
 
 - Push your branch  
