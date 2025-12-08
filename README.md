@@ -1,46 +1,208 @@
 # 📁 File System Explorer
-A command-line tool for exploring directories, viewing metadata, filtering files, and generating clean output formats.  
-Built as part of my **GSoC preparation (Systems / OS / CLI Tools / Security)**.
+
+A command-line tool for exploring directories, inspecting metadata, detecting symbolic links, handling large folders safely, filtering hidden files, and exporting results in clean table or JSON formats.  
+Built as part of my **Open-Source Contribution preparation (Systems / OS / File Tools / Security)**.
 
 ---
 
-## ⭐ Features (Current – Milestone 1)
+## ⭐ Features (Current – Advanced Version)
 
-- List all files & folders in a given directory  
-- Show file metadata:
-  - File size  
+### 🔍 File & Directory Analysis
+- List all files & folders in a directory  
+- Detect file type:  
+  - **FILE**  
+  - **DIR**  
+  - **SYMLINK**  
+- Extract metadata:
+  - Size (bytes)  
   - Last modified timestamp  
-- Identify file vs folder  
-- Simple CLI interface (`--path`)
-- Basic error handling
+  - Absolute path  
+
+---
+
+### 🧵 Symbolic Link Detection
+- Uses `os.lstat()` to differentiate between files and links  
+- JSON output includes:
+```json
+{
+    "is_link": true
+}
+```
+
+---
+
+### 📂 Hidden Files Support
+- Hidden files (`.filename`) are skipped by default  
+- Show them using:
+```bash
+--hidden
+```
+
+---
+
+### ⚠️ Handles Very Large Directories
+- Protects against scanning huge folders by default  
+- Warns when the number of items is large  
+- User-controlled scan limit:
+```bash
+--max 5000
+```
+
+---
+
+### ❌ Robust Error Handling
+Handles common issues gracefully:
+
+- Invalid path  
+- Permission denied  
+- Path is not a directory  
+- Restricted system folders  
+
+---
+
+### 🧾 Clean CLI Output
+Readable, table-like output:
+
+```
+Type       | Name                           | Size (bytes) | Last Modified
+--------------------------------------------------------------------------------
+FILE       | explorer.py                     |        1440  | 2025-02-02T14:12:10
+DIR        | examples                        |       40960  | 2025-02-01T18:22:11
+LINK       | shortcut.lnk                    |          22  | 2025-02-01T09:15:00
+```
+
+---
+
+### 🧱 JSON Output
+Perfect for automation or data pipelines:
+
+```bash
+python explorer.py --path . --json
+```
+
+Results are printed as pretty JSON.
 
 ---
 
 ## 🚀 Upcoming Features (Milestones 2–4)
 
-### 🔹 **Milestone 2 — Recursive Exploration**
-- `--recursive` flag to scan all subdirectories  
-- Tree-style output (like `tree` command)  
-- Count total files & folders  
-
-### 🔹 **Milestone 3 — Filters**
-- Filter by extension → `--ext .txt`  
-- Filter by minimum size → `--min-size 1000`  
-- Filter by keyword in name → `--name report`  
-
-### 🔹 **Milestone 4 — Output Enhancements**
-- JSON output → `--json`  
-- Sorting options:
-  - `--sort size`
-  - `--sort name`
-  - `--sort modified`
-- Colorful CLI formatting  
-- Summary view (total size, number of files, etc.)
+### 🔹 Milestone 2 — Recursive Exploration
+- `--recursive` flag  
+- Tree-like directory display  
+- Count total files, folders, and symlinks  
 
 ---
 
-## 🧪 Usage
+### 🔹 Milestone 3 — Filters
+- Filter by extension → `--ext .txt`  
+- Filter by minimum size → `--min-size 1000`  
+- Filter by keyword → `--name report`  
 
-### **Basic run:**
+---
+
+### 🔹 Milestone 4 — Sorting & Formatting
+Sorting options:
+- `--sort name`  
+- `--sort size`  
+- `--sort modified`  
+
+Planned enhancements:
+- Summary view  
+- Colorized output  
+
+---
+
+## 🧪 Usage Examples
+
+### 📌 Basic scan
 ```bash
 python explorer.py --path .
+```
+
+### 📌 Show hidden files
+```bash
+python explorer.py --path . --hidden
+```
+
+### 📌 JSON output
+```bash
+python explorer.py --path . --json
+```
+
+### 📌 Limit scanning for large folders
+```bash
+python explorer.py --path C:\ --max 2000
+```
+
+---
+
+## 📦 Project Structure
+
+```
+file-system-explorer/
+├── explorer.py         # Main CLI tool (advanced version)
+├── utils.py            # Future helper functions: filters, sorting, formatting
+├── CONTRIBUTING.md     # Contributor guidelines
+├── LICENSE             # MIT License
+└── README.md
+```
+
+---
+
+## 🛠 Requirements
+- Python **3.8+**  
+- No external libraries required  
+
+---
+
+## 🧠 Learning Goals
+
+### 🖥️ Operating Systems
+- Directory traversal  
+- File metadata handling  
+- Detecting symbolic links  
+
+### 🧩 Systems Programming
+- CLI design  
+- Error handling  
+- Large input handling  
+
+### ☁️ Cloud & DevOps
+- JSON output (for pipelines)  
+- Portable CLI utilities  
+
+### 🔐 Security
+- Safe path inspection  
+- Permission-aware scanning  
+
+---
+
+## 🗺️ Project Roadmap
+
+| Milestone      | Status | Description |
+|----------------|--------|-------------|
+| Milestone 1    | ✅ Completed | Basic explorer + metadata output |
+| Milestone 2    | ⬜ Pending  | Recursive scanning (`--recursive`) |
+| Milestone 3    | ⬜ Pending  | Filters: ext, size, keyword |
+| Milestone 4    | ⬜ Pending  | Sorting + color formatting + summary |
+| Milestone 5    | ⬜ Future   | Docker support + CI pipeline |
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome!  
+Please read [`CONTRIBUTING.md`](./CONTRIBUTING.md) to understand the process.
+
+---
+
+## 📄 License
+
+This project is licensed under the **MIT License**.  
+See [`LICENSE`](./LICENSE) for details.
+
+---
+
+## ⭐ Acknowledgements
+
+This project is part of my preparation Open-Source Contributions — learning real-world systems programming concepts by building practical tools.
