@@ -6,50 +6,48 @@ from datetime import datetime
 def format_metadata(path):
     """Extract metadata for a given file."""
     try:
-        stats = os.lstat(path)  # lstat allows symbolic links detection
+        stats = os.lstat(path)  # lstat allows symbolic link detection
     except (FileNotFoundError, PermissionError):
         return None
 
-    metadata = {
+    return {
         "name": os.path.basename(path),
         "path": path,
         "is_file": os.path.isfile(path),
         "is_dir": os.path.isdir(path),
         "is_link": os.path.islink(path),
         "size_bytes": stats.st_size,
-        "modified": datetime.fromtimestamp(stats.st_mtime).isoformat(),
+        "modified": datetime.fromtimestamp(stats.st_mtime).isoformat()
     }
-    return metadata
-
 
 def explore_directory(path, show_hidden=False, max_entries=5000):
-    """Explore directory with limit handling for very large folders."""
+    """Explore directory with filtering + safety for huge directories."""
     try:
         items = os.listdir(path)
     except FileNotFoundError:
-        raise FileNotFoundError("Invalid --path: Directory does not exist.")
+        print("❌ Invalid path: Directory does not exist.")
+        return []
     except PermissionError:
-        raise PermissionError("Permission denied: Cannot access this folder.")
+        print("❌ Permission denied.")
+        return []
 
-    # Filter hidden files if needed
+    # Handle hidden files
     if not show_hidden:
         items = [item for item in items if not item.startswith(".")]
 
-    # Limit entries for huge directories
+    # Limit large folders
     if len(items) > max_entries:
-        print(f"⚠️ Directory has {len(items)} items. Showing first {max_entries}.")
+        print(f"⚠️  Directory has {len(items)} items. Showing first {max_entries}.")
         items = items[:max_entries]
 
-    metadata_list = []
-
+    results = []
     for item in items:
         full_path = os.path.join(path, item)
         meta = format_metadata(full_path)
         if meta:
-            metadata_list.append(meta)
+            results.append(meta)
 
-    return metadata_list
-
+    return results
 
 def print_table(data):
     """Print clean table-like output."""
@@ -59,7 +57,6 @@ def print_table(data):
     for entry in data:
         ftype = "FILE" if entry["is_file"] else "DIR" if entry["is_dir"] else "LINK"
         print(f"{ftype:10} | {entry['name'][:30]:30} | {entry['size_bytes']:12} | {entry['modified']}")
-
 
 def main():
     parser = argparse.ArgumentParser(description="Advanced File System Explorer")
@@ -71,20 +68,17 @@ def main():
 
     args = parser.parse_args()
 
-    # Validate argument: must be a directory
+    # Validate path
     if not os.path.isdir(args.path):
-        print("❌ Error: The provided --path is not a valid directory.")
+        print("❌ Error: Provided --path is not a valid directory.")
         return
 
-    # Explore directory
     data = explore_directory(args.path, show_hidden=args.hidden, max_entries=args.max)
 
-    # Output in JSON
     if args.json:
         print(json.dumps(data, indent=4))
     else:
         print_table(data)
-
 
 if __name__ == "__main__":
     main()
