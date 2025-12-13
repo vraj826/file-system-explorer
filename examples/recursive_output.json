@@ -1,1 +1,112 @@
-
+[
+    {
+        "name": ".",
+        "path": ".",
+        "is_file": false,
+        "is_dir": true,
+        "is_link": false,
+        "size_bytes": 4096,
+        "modified": "2025-12-13T12:53:40.357594",
+        "level": 0
+    },
+    {
+        "name": "CONTRIBUTING.md",
+        "path": ".\\CONTRIBUTING.md",
+        "is_file": true,
+        "is_dir": false,
+        "is_link": false,
+        "size_bytes": 1186,
+        "modified": "2025-12-13T12:53:40.357594",
+        "level": 1
+    },
+    {
+        "name": "explorer.py",
+        "path": ".\\explorer.py",
+        "is_file": true,
+        "is_dir": false,
+        "is_link": false,
+        "size_bytes": 4903,
+        "modified": "2025-12-13T12:53:40.357594",
+        "level": 1
+    },
+    {
+        "name": "LICENSE",
+        "path": ".\\LICENSE",
+        "is_file": true,
+        "is_dir": false,
+        "is_link": false,
+        "size_bytes": 684,
+        "modified": "2025-12-13T12:53:40.357594",
+        "level": 1
+    },
+    {
+        "name": "README.md",
+        "path": ".\\README.md",
+        "is_file": true,
+        "is_dir": false,
+        "is_link": false,
+        "size_bytes": 5282,
+        "modified": "2025-12-13T12:53:40.357594",
+        "level": 1
+    },
+    {
+        "name": "utils.py",
+        "path": ".\\utils.py",
+        "is_file": true,
+        "is_dir": false,
+        "is_link": false,
+        "size_bytes": 130,
+        "modified": "2025-12-13T12:53:40.357594",
+        "level": 1
+    },
+    {
+        "name": "examples",
+        "path": ".\\examples",
+        "is_file": false,
+        "is_dir": true,
+        "is_link": false,
+        "size_bytes": 4096,
+        "modified": "2025-12-13T12:53:40.357594",
+        "level": 1
+    },
+    {
+        "name": "basic_output.txt",
+        "path": ".\\examples\\basic_output.txt",
+        "is_file": true,
+        "is_dir": false,
+        "is_link": false,
+        "size_bytes": 692,
+        "modified": "2025-12-13T12:54:07.862477",
+        "level": 2
+    },
+    {
+        "name": "README.md",
+        "path": ".\\examples\\README.md",
+        "is_file": true,
+        "is_dir": false,
+        "is_link": false,
+        "size_bytes": 2,
+        "modified": "2025-12-13T12:53:40.357594",
+        "level": 2
+    },
+    {
+        "name": "recursive_output.json",
+        "path": ".\\examples\\recursive_output.json",
+        "is_file": true,
+        "is_dir": false,
+        "is_link": false,
+        "size_bytes": 2905,
+        "modified": "2025-12-13T12:55:27.917697",
+        "level": 2
+    },
+    {
+        "name": "recursive_tree.txt",
+        "path": ".\\examples\\recursive_tree.txt",
+        "is_file": true,
+        "is_dir": false,
+        "is_link": false,
+        "size_bytes": 0,
+        "modified": "2025-12-13T12:54:19.335761",
+        "level": 2
+    }
+]
