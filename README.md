@@ -90,9 +90,16 @@ LINK       | shortcut.lnk                    |          22  | 2025-02-01T09:15:0
 ### 🌳 Tree Output (Recursive Mode)
 ```
 📁 file-system-explorer
+    📄 CONTRIBUTING.md
     📄 explorer.py
+    📄 LICENSE
+    📄 README.md
     📄 utils.py
     📁 examples
+        📄 basic_output.txt
+        📄 README.md
+        📄 recursive_output.json
+        📄 recursive_tree.txt
 ```
 
 ---
