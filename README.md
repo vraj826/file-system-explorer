@@ -20,6 +20,20 @@ Built as part of my **Open-Source Contribution preparation (Systems / OS / File 
 
 ---
 
+### 🔁 Recursive Directory Traversal
+- Recursively explore subdirectories using `os.walk()`  
+- Tree-style hierarchical output  
+- Optional depth control  
+- Recursive JSON export  
+
+Supported flags:
+```bash
+--recursive
+```
+```
+--depth <number>
+```
+
 ### 🧵 Symbolic Link Detection
 - Uses `os.lstat()` to differentiate between files and links  
 - JSON output includes:
@@ -73,25 +87,29 @@ LINK       | shortcut.lnk                    |          22  | 2025-02-01T09:15:0
 
 ---
 
+### 🌳 Tree Output (Recursive Mode)
+```
+📁 file-system-explorer
+    📄 explorer.py
+    📄 utils.py
+    📁 examples
+```
+
+---
+
 ### 🧱 JSON Output
-Perfect for automation or data pipelines:
+Perfect for automation, scripting, or data pipelines:
 
 ```bash
 python explorer.py --path . --json
+python explorer.py --path . --recursive --json
 ```
 
-Results are printed as pretty JSON.
+Results are printed as formatted JSON.
 
 ---
 
-## 🚀 Upcoming Features (Milestones 2–4)
-
-### 🔹 Milestone 2 — Recursive Exploration
-- `--recursive` flag  
-- Tree-like directory display  
-- Count total files, folders, and symlinks  
-
----
+## 🚀 Upcoming Features (Milestones 3,4)
 
 ### 🔹 Milestone 3 — Filters
 - Filter by extension → `--ext .txt`  
@@ -129,6 +147,16 @@ python explorer.py --path . --hidden
 python explorer.py --path . --json
 ```
 
+### 📌 Recursive traversal
+```
+python explorer.py --path . --recursive
+```
+
+### 📌 Recursive with depth limit
+```
+python explorer.py --path . --recursive --depth 2
+```
+
 ### 📌 Limit scanning for large folders
 ```bash
 python explorer.py --path C:\ --max 2000
@@ -158,22 +186,24 @@ file-system-explorer/
 ## 🧠 Learning Goals
 
 ### 🖥️ Operating Systems
-- Directory traversal  
+- Directory traversal
+- Recursive filesystem exploration
 - File metadata handling  
 - Detecting symbolic links  
 
 ### 🧩 Systems Programming
 - CLI design  
 - Error handling  
-- Large input handling  
+- Large input handling
+- Tree-based output formatting
 
 ### ☁️ Cloud & DevOps
-- JSON output (for pipelines)  
+- JSON output for automation   
 - Portable CLI utilities  
 
 ### 🔐 Security
 - Safe path inspection  
-- Permission-aware scanning  
+- Permission-aware filesystem access
 
 ---
 
@@ -182,7 +212,7 @@ file-system-explorer/
 | Milestone      | Status | Description |
 |----------------|--------|-------------|
 | Milestone 1    | ✅ Completed | Basic explorer + metadata output |
-| Milestone 2    | ⬜ Pending  | Recursive scanning (`--recursive`) |
+| Milestone 2    | ✅ Completed | Recursive traversal (--recursive, --depth) |
 | Milestone 3    | ⬜ Pending  | Filters: ext, size, keyword |
 | Milestone 4    | ⬜ Pending  | Sorting + color formatting + summary |
 | Milestone 5    | ⬜ Future   | Docker support + CI pipeline |
@@ -205,4 +235,4 @@ See [`LICENSE`](./LICENSE) for details.
 
 ## ⭐ Acknowledgements
 
-This project is part of my preparation Open-Source Contributions — learning real-world systems programming concepts by building practical tools.
+This project is part of my Open-Source Contribution preparation — learning real-world systems programming concepts by building practical CLI tools.
