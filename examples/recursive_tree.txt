@@ -1,1 +1,11 @@
-
+📁 .
+    📄 CONTRIBUTING.md
+    📄 explorer.py
+    📄 LICENSE
+    📄 README.md
+    📄 utils.py
+    📁 examples
+        📄 basic_output.txt
+        📄 README.md
+        📄 recursive_output.json
+        📄 recursive_tree.txt
