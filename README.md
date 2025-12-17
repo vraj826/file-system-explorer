@@ -116,14 +116,7 @@ Results are printed as formatted JSON.
 
 ---
 
-## 🚀 Upcoming Features (Milestones 3,4)
-
-### 🔹 Milestone 3 — Filters
-- Filter by extension → `--ext .txt`  
-- Filter by minimum size → `--min-size 1000`  
-- Filter by keyword → `--name report`  
-
----
+## 🚀 Upcoming Features (Milestones 4)
 
 ### 🔹 Milestone 4 — Sorting & Formatting
 Sorting options:
@@ -162,6 +155,26 @@ python explorer.py --path . --recursive
 ### 📌 Recursive with depth limit
 ```
 python explorer.py --path . --recursive --depth 2
+```
+
+### 📌 Filter by extension
+```
+python explorer.py --path . --ext .py
+```
+
+### 📌 Filter by minimum size
+```
+python explorer.py --path . --min-size 1000
+```
+
+### 📌 Filter by keyword
+```
+python explorer.py --path . --name test
+```
+
+### 📌 Combine filters (advanced usage)
+```
+python explorer.py --path . --recursive --ext .py --min-size 500
 ```
 
 ### 📌 Limit scanning for large folders
@@ -203,6 +216,7 @@ file-system-explorer/
 - Error handling  
 - Large input handling
 - Tree-based output formatting
+- File filtering logic
 
 ### ☁️ Cloud & DevOps
 - JSON output for automation   
@@ -220,7 +234,7 @@ file-system-explorer/
 |----------------|--------|-------------|
 | Milestone 1    | ✅ Completed | Basic explorer + metadata output |
 | Milestone 2    | ✅ Completed | Recursive traversal (--recursive, --depth) |
-| Milestone 3    | ⬜ Pending  | Filters: ext, size, keyword |
+| Milestone 3    | ✅ Completed | Filters: ext, size, keyword |
 | Milestone 4    | ⬜ Pending  | Sorting + color formatting + summary |
 | Milestone 5    | ⬜ Future   | Docker support + CI pipeline |
 
