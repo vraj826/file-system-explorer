@@ -197,12 +197,18 @@ def print_table(data):
 
 
 def print_tree(data):
-    """Print hierarchical tree output."""
+    
     for entry in data:
         indent = "    " * entry.get("level", 0)
-        symbol = "📁" if entry["is_dir"] else "📄" if entry["is_file"] else "🔗"
-        print(f"{indent}{symbol} {entry['name']}")
 
+        if entry["is_dir"]:
+            symbol = "[DIR]"
+        elif entry["is_file"]:
+            symbol = "[FILE]"
+        else:
+            symbol = "[LINK]"
+
+        print(f"{indent}{symbol} {entry['name']}")
 
 # --------------------------------------------------
 # MAIN ENTRY POINT
