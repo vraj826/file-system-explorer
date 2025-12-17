@@ -74,7 +74,7 @@ Handles common issues gracefully:
 
 ---
 
-### 🧾 Clean CLI Output
+### 🧾 Clean CLI Output (Non-Recursive)
 Readable, table-like output:
 
 ```
@@ -122,70 +122,127 @@ Results are printed as formatted JSON.
 
 ---
 
-## 🚀 Upcoming Features (Milestones 4)
+### 🔎 File Filters (Milestone 3)
 
-### 🔹 Milestone 4 — Sorting & Formatting
-Sorting options:
-- `--sort name`  
-- `--sort size`  
-- `--sort modified`  
+Filters apply only to files (directories are preserved).
 
-Planned enhancements:
-- Summary view  
-- Colorized output  
+   - Filter by extension:
+   ```
+   --ext .py
+   ```
+   - Filter by minimum size:
+   ```
+   --min-size 1000
+   ```
+   - Filter by keyword:
+   ```
+   --name report
+   ```
+
+Filters can be combined and work in both recursive and non-recursive modes.
+
+---
+
+### 🔃 Sorting (Milestone 4)
+
+Sort files in a directory or recursive scan.
+
+Supported options:
+   - Sort by name:
+   ```
+   --sort name
+```
+   - Sort by file size:
+   ```
+   --sort size
+   ```
+   - Sort by last modified time:
+   ```
+   --sort modified
+   ```
+
+Sorting behavior:
+- Applies only to files
+- Directories retain structure and order
+- Works in recursive and non-recursive modes
+- Can be combined with filters
 
 ---
 
 ## 🧪 Usage Examples
 
-### 📌 Basic scan
+### Milestone 1
+#### 📌 Basic scan
 ```bash
 python explorer.py --path .
 ```
 
-### 📌 Show hidden files
+#### 📌 Show hidden files
 ```bash
 python explorer.py --path . --hidden
 ```
 
-### 📌 JSON output
+#### 📌 Limit scanning for large folders
+```
+python explorer.py --path C:\ --max 2000
+```
+
+### Milestone 2
+#### 📌 JSON output
 ```bash
 python explorer.py --path . --json
 ```
 
-### 📌 Recursive traversal
+#### 📌 Recursive traversal
 ```
 python explorer.py --path . --recursive
 ```
 
-### 📌 Recursive with depth limit
+#### 📌 Recursive with depth limit
 ```
 python explorer.py --path . --recursive --depth 2
 ```
 
-### 📌 Filter by extension
+### Milestone 3
+#### 📌 Filter by extension
 ```
 python explorer.py --path . --ext .py
 ```
 
-### 📌 Filter by minimum size
+#### 📌 Filter by minimum size
 ```
 python explorer.py --path . --min-size 1000
 ```
 
-### 📌 Filter by keyword
+#### 📌 Filter by keyword
 ```
 python explorer.py --path . --name test
 ```
 
-### 📌 Combine filters (advanced usage)
+#### 📌 Combine filters (advanced usage)
 ```
 python explorer.py --path . --recursive --ext .py --min-size 500
 ```
 
-### 📌 Limit scanning for large folders
-```bash
-python explorer.py --path C:\ --max 2000
+### Milestone 4
+#### 📌 Sort by name
+```
+python explorer.py --path . --sort name
+```
+
+#### 📌 Sort by size
+```
+python explorer.py --path . --sort size
+```
+
+#### 📌 Sort by modified time (recursive)
+```
+python explorer.py --path . --recursive --sort modified
+```
+
+#### 📌 Combine filters + sorting
+```
+python explorer.py --path . --recursive --ext .py --sort size
 ```
 
 ---
@@ -198,7 +255,7 @@ file-system-explorer/
 ├── utils.py            # Future helper functions: filters, sorting, formatting
 ├── CONTRIBUTING.md     # Contributor guidelines
 ├── LICENSE             # MIT License
-├── examples            # folder having test runs
+├── examples/           # folder having test runs
 └── README.md
 ```
 
@@ -242,8 +299,9 @@ file-system-explorer/
 | Milestone 1    | ✅ Completed | Basic explorer + metadata output |
 | Milestone 2    | ✅ Completed | Recursive traversal (--recursive, --depth) |
 | Milestone 3    | ✅ Completed | Filters: ext, size, keyword |
-| Milestone 4    | ⬜ Pending  | Sorting + color formatting + summary |
-| Milestone 5    | ⬜ Future   | Docker support + CI pipeline |
+| Milestone 4    | ✅ Completed  | Sorting: name, size, modified |
+| Milestone 5    | ⬜ Future   | Summary stats + Color output |
+| Milestone 6    | ⬜ Future   | Docker support + CI pipeline |
 
 ---
 
