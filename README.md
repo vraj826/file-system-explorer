@@ -198,6 +198,7 @@ file-system-explorer/
 ├── utils.py            # Future helper functions: filters, sorting, formatting
 ├── CONTRIBUTING.md     # Contributor guidelines
 ├── LICENSE             # MIT License
+├── examples            # folder having test runs
 └── README.md
 ```
 
