@@ -1,0 +1,42 @@
+[
+    {
+        "name": "CONTRIBUTING.md",
+        "path": ".\\CONTRIBUTING.md",
+        "is_file": true,
+        "is_dir": false,
+        "is_link": false,
+        "size_bytes": 1186,
+        "modified": "2025-12-17T18:41:38.704531",
+        "level": 0
+    },
+    {
+        "name": "examples",
+        "path": ".\\examples",
+        "is_file": false,
+        "is_dir": true,
+        "is_link": false,
+        "size_bytes": 4096,
+        "modified": "2025-12-17T19:23:09.759523",
+        "level": 0
+    },
+    {
+        "name": "explorer.py",
+        "path": ".\\explorer.py",
+        "is_file": true,
+        "is_dir": false,
+        "is_link": false,
+        "size_bytes": 8838,
+        "modified": "2025-12-17T19:26:22.116202",
+        "level": 0
+    },
+    {
+        "name": "README.md",
+        "path": ".\\README.md",
+        "is_file": true,
+        "is_dir": false,
+        "is_link": false,
+        "size_bytes": 7247,
+        "modified": "2025-12-17T19:26:22.114125",
+        "level": 0
+    }
+]
