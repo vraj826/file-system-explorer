@@ -1,0 +1,17 @@
+[DIR] .
+    [DIR] examples
+    [FILE] CONTRIBUTING.md
+    [FILE] LICENSE
+    [FILE] utils.py
+    [FILE] README.md
+    [FILE] explorer.py
+        [FILE] basic_output.txt
+        [FILE] README.md
+        [FILE] recursive_output.json
+        [FILE] recursive_tree.txt
+        [FILE] filtered_py_files.txt
+        [FILE] large_files.json
+        [FILE] keyword_filtered_files.txt
+        [FILE] sorted_by_name.txt
+        [FILE] sorted_by_size.txt
+        [FILE] sorted_by_modified.txt
