@@ -80,9 +80,12 @@ Readable, table-like output:
 ```
 Type       | Name                           | Size (bytes) | Last Modified
 --------------------------------------------------------------------------------
-FILE       | explorer.py                     |        1440  | 2025-02-02T14:12:10
-DIR        | examples                        |       40960  | 2025-02-01T18:22:11
-LINK       | shortcut.lnk                    |          22  | 2025-02-01T09:15:00
+FILE       | CONTRIBUTING.md                |         1186 | 2025-12-17T18:41:38.704531
+DIR        | examples                       |         4096 | 2025-12-17T18:41:38.722697
+FILE       | explorer.py                    |         8374 | 2025-12-17T18:41:38.722697
+FILE       | LICENSE                        |          684 | 2025-12-17T18:41:38.704531
+FILE       | README.md                      |         5688 | 2025-12-17T18:41:38.716670
+FILE       | utils.py                       |          130 | 2025-12-17T18:41:38.722697
 ```
 
 ---
@@ -100,6 +103,9 @@ LINK       | shortcut.lnk                    |          22  | 2025-02-01T09:15:0
         📄 README.md
         📄 recursive_output.json
         📄 recursive_tree.txt
+        📄 filtered_py_files.txt
+        📄 large_files.json
+        📄 keyword_filtered_files.txt
 ```
 
 ---
