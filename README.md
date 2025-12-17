@@ -92,20 +92,23 @@ FILE       | utils.py                       |          130 | 2025-12-17T18:41:38
 
 ### 🌳 Tree Output (Recursive Mode)
 ```
-📁 file-system-explorer
-    📄 CONTRIBUTING.md
-    📄 explorer.py
-    📄 LICENSE
-    📄 README.md
-    📄 utils.py
-    📁 examples
-        📄 basic_output.txt
-        📄 README.md
-        📄 recursive_output.json
-        📄 recursive_tree.txt
-        📄 filtered_py_files.txt
-        📄 large_files.json
-        📄 keyword_filtered_files.txt
+[DIR] .
+    [FILE] CONTRIBUTING.md
+    [FILE] explorer.py
+    [FILE] LICENSE
+    [FILE] README.md
+    [FILE] utils.py
+    [DIR] examples
+        [FILE] basic_output.txt
+        [FILE] filtered_py_files.txt
+        [FILE] keyword_filtered_files.txt
+        [FILE] large_files.json
+        [FILE] README.md
+        [FILE] recursive_output.json
+        [FILE] recursive_tree.txt
+        [FILE] sorted_by_modified.txt
+        [FILE] sorted_by_name.txt
+        [FILE] sorted_by_size.txt
 ```
 
 ---
