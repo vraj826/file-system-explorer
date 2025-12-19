@@ -1,0 +1,27 @@
+# Note: This file contains ANSI escape sequences used by terminals to render colored output. 
+# When viewed in a compatible terminal, colors will appear correctly. When opened in a plain text editor, the raw escape codes may be visible.
+
+[94m[DIR][0m .
+    [92m[FILE][0m CONTRIBUTING.md
+    [92m[FILE][0m explorer.py
+    [92m[FILE][0m LICENSE
+    [92m[FILE][0m README.md
+    [94m[DIR][0m examples
+        [92m[FILE][0m basic_output.txt
+        [92m[FILE][0m filtered_py_files.txt
+        [92m[FILE][0m keyword_filtered_files.txt
+        [92m[FILE][0m large_files.json
+        [92m[FILE][0m README.md
+        [92m[FILE][0m recursive_output.json
+        [92m[FILE][0m recursive_tree.txt
+        [92m[FILE][0m sorted_by_modified.txt
+        [92m[FILE][0m sorted_by_name.txt
+        [92m[FILE][0m sorted_by_size.txt
+        [92m[FILE][0m summary_colored_output.txt
+
+Summary
+----------------------------------------
+Total files       : 15
+Total directories : 2
+Total symlinks    : 0
+Total size (bytes): 28115
