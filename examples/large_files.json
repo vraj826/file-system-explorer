@@ -6,7 +6,7 @@
         "is_dir": false,
         "is_link": false,
         "size_bytes": 1186,
-        "modified": "2025-12-17T18:41:38.704531",
+        "modified": "2025-12-19T18:20:58.070153",
         "level": 0
     },
     {
@@ -16,7 +16,7 @@
         "is_dir": true,
         "is_link": false,
         "size_bytes": 4096,
-        "modified": "2025-12-17T19:23:09.759523",
+        "modified": "2025-12-19T18:20:58.080485",
         "level": 0
     },
     {
@@ -25,8 +25,8 @@
         "is_file": true,
         "is_dir": false,
         "is_link": false,
-        "size_bytes": 8838,
-        "modified": "2025-12-17T19:26:22.116202",
+        "size_bytes": 8552,
+        "modified": "2025-12-19T18:20:58.080485",
         "level": 0
     },
     {
@@ -35,8 +35,8 @@
         "is_file": true,
         "is_dir": false,
         "is_link": false,
-        "size_bytes": 7247,
-        "modified": "2025-12-17T19:26:22.114125",
+        "size_bytes": 8392,
+        "modified": "2025-12-19T18:20:58.070153",
         "level": 0
     }
 ]
