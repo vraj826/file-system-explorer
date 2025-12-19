@@ -1,9 +1,6 @@
 # ⭐ Examples
 
-This folder contains sample outputs generated using the **File System Explorer**.
-
-These examples help users and reviewers understand the tool’s behavior
-without running it locally.
+This folder contains sample outputs generated using the **File System Explorer**, which helps you to understand the tool’s behavior without running it locally.
 
 ---
 
@@ -78,3 +75,19 @@ without running it locally.
   python explorer.py --path . --recursive --sort modified
   ```
 - Demonstrates sorting by last modified time in recursive mode
+
+### 📌 Milestone 5 – Summary & Color
+
+#### `summary_output.txt`
+- Generated using:
+  ```
+  python explorer.py --path . --recursive --summary
+  ```
+- Demonstrates summary statistics including total files, directories, symbolic links, and total file size after recursive traversal.
+
+#### `summary_colored_output.txt`
+- Generated using:
+  ```
+  python explorer.py --path . --recursive --summary --color
+  ```
+- Demonstrates summary statistics combined with optional colorized output for directories, files, and symbolic links.
