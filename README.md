@@ -198,6 +198,58 @@ Enable colored output for better readability.
 
 ---
 
+## 📦 Project Structure
+
+```
+file-system-explorer/
+├── explorer.py         # Main CLI tool (advanced version)
+├── CONTRIBUTING.md     # Contributor guidelines
+├── LICENSE             # MIT License
+├── examples/           # folder having test runs
+└── README.md
+```
+
+---
+
+## 🛠 Requirements
+- Python **3.8+**  
+- No external libraries required  
+
+---
+
+## ▶️ How to Run Locally
+
+Follow the steps below to set up and run the File System Explorer on your local machine.
+
+- ### 1. Clone the Repository
+
+  - Clone the project from GitHub:
+    ```
+    git clone https://github.com/vraj826/file-system-explorer.git
+    ```
+
+  - Navigate into the project directory:
+    ```
+    cd file-system-explorer
+    ```
+
+- ### 2. Run the Tool
+
+  The project does not require any external dependencies.
+
+  - Run a basic scan:
+    ```
+    python explorer.py --path .
+    ```
+
+- ### 3. Getting Help
+ 
+  View all available options:
+    ```
+    python explorer.py --help
+    ```
+
+
 ## 🧪 Usage Examples
 
 ### Milestone 1
@@ -294,24 +346,6 @@ python explorer.py --path . --recursive --ext .py --sort modified --summary --co
 - ``` --ext .py                   # Milestone 3 (Filter by extension) ```
 - ``` --sort modified             # Milestone 4 (Sort by modified time) ```
 - ``` --summary --color           # Milestone 5 (Summary Statistics & Colorized Output) ```
----
-
-## 📦 Project Structure
-
-```
-file-system-explorer/
-├── explorer.py         # Main CLI tool (advanced version)
-├── CONTRIBUTING.md     # Contributor guidelines
-├── LICENSE             # MIT License
-├── examples/           # folder having test runs
-└── README.md
-```
-
----
-
-## 🛠 Requirements
-- Python **3.8+**  
-- No external libraries required  
 
 ---
 
