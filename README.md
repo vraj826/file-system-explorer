@@ -85,7 +85,6 @@ DIR        | examples                       |         4096 | 2025-12-17T18:41:38
 FILE       | explorer.py                    |         8374 | 2025-12-17T18:41:38.722697
 FILE       | LICENSE                        |          684 | 2025-12-17T18:41:38.704531
 FILE       | README.md                      |         5688 | 2025-12-17T18:41:38.716670
-FILE       | utils.py                       |          130 | 2025-12-17T18:41:38.722697
 ```
 
 ---
@@ -97,7 +96,6 @@ FILE       | utils.py                       |          130 | 2025-12-17T18:41:38
     [FILE] explorer.py
     [FILE] LICENSE
     [FILE] README.md
-    [FILE] utils.py
     [DIR] examples
         [FILE] basic_output.txt
         [FILE] filtered_py_files.txt
@@ -169,6 +167,32 @@ Sorting behavior:
 - Directories retain structure and order
 - Works in recursive and non-recursive modes
 - Can be combined with filters
+
+---
+
+### 📊 Summary Statistics (Milestone 5)
+
+Display useful summary information at the end of output.
+```
+--summary
+```
+
+Includes:
+- Total files
+- Total directories
+- Total symbolic links
+- Total size of files (bytes)
+
+### 🎨 Colorized Output (Milestone 5)
+
+Enable colored output for better readability.
+```
+--color
+```
+- Directories → Blue
+- Files → Green
+- Symlinks → Cyan
+- Disabled by default (safe for redirection & CI)
 
 ---
 
@@ -248,6 +272,26 @@ python explorer.py --path . --recursive --sort modified
 python explorer.py --path . --recursive --ext .py --sort size
 ```
 
+### Milestone 5
+#### 📌 Summary statistics
+```
+python explorer.py --path . --recursive --summary
+```
+
+#### 📌Colorized output
+```
+python explorer.py --path . --recursive --color
+```
+
+### Everything combined
+```
+python explorer.py --path . --recursive --ext .py --sort modified --summary --color
+```
+- ``` python explorer.py --path . # Milestone 1 (Basic Scan) ```
+- ``` --recursive                 # Milestone 2 (Recursive traversal) ```
+- ``` --ext .py                   # Milestone 3 (Filter by extension) ```
+- ``` --sort modified             # Milestone 4 (Sort by modified time) ```
+- ``` --summary --color           # Milestone 5 (Summary Statistics & Colorized Output) ```
 ---
 
 ## 📦 Project Structure
@@ -255,7 +299,6 @@ python explorer.py --path . --recursive --ext .py --sort size
 ```
 file-system-explorer/
 ├── explorer.py         # Main CLI tool (advanced version)
-├── utils.py            # Future helper functions: filters, sorting, formatting
 ├── CONTRIBUTING.md     # Contributor guidelines
 ├── LICENSE             # MIT License
 ├── examples/           # folder having test runs
@@ -279,7 +322,7 @@ file-system-explorer/
 - Detecting symbolic links  
 
 ### 🧩 Systems Programming
-- CLI design  
+- CLI design with ` argparse `
 - Error handling  
 - Large input handling
 - Tree-based output formatting
@@ -287,11 +330,13 @@ file-system-explorer/
 
 ### ☁️ Cloud & DevOps
 - JSON output for automation   
-- Portable CLI utilities  
+- Scriptable CLI tools
+- CI-safe output design  
 
 ### 🔐 Security
 - Safe path inspection  
 - Permission-aware filesystem access
+- Symlink handling
 
 ---
 
@@ -302,8 +347,8 @@ file-system-explorer/
 | Milestone 1    | ✅ Completed | Basic explorer + metadata output |
 | Milestone 2    | ✅ Completed | Recursive traversal (--recursive, --depth) |
 | Milestone 3    | ✅ Completed | Filters: ext, size, keyword |
-| Milestone 4    | ✅ Completed  | Sorting: name, size, modified |
-| Milestone 5    | ⬜ Future   | Summary stats + Color output |
+| Milestone 4    | ✅ Completed | Sorting: name, size, modified |
+| Milestone 5    | ✅ Completed | Summary stats + Color output |
 | Milestone 6    | ⬜ Future   | Docker support + CI pipeline |
 
 ---
