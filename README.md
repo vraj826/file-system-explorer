@@ -107,6 +107,8 @@ FILE       | README.md                      |         5688 | 2025-12-17T18:41:38
         [FILE] sorted_by_modified.txt
         [FILE] sorted_by_name.txt
         [FILE] sorted_by_size.txt
+        [FILE] summary_colored_output.txt
+        [FILE] summary_output.txt
 ```
 
 ---
@@ -278,12 +280,12 @@ python explorer.py --path . --recursive --ext .py --sort size
 python explorer.py --path . --recursive --summary
 ```
 
-#### 📌Colorized output
+#### 📌 Colorized output
 ```
 python explorer.py --path . --recursive --color
 ```
 
-### Everything combined
+### 📌 Everything combined
 ```
 python explorer.py --path . --recursive --ext .py --sort modified --summary --color
 ```
