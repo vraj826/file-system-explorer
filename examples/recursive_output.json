@@ -6,7 +6,7 @@
         "is_dir": true,
         "is_link": false,
         "size_bytes": 4096,
-        "modified": "2025-12-13T12:53:40.357594",
+        "modified": "2025-12-19T18:20:58.080485",
         "level": 0
     },
     {
@@ -16,7 +16,7 @@
         "is_dir": false,
         "is_link": false,
         "size_bytes": 1186,
-        "modified": "2025-12-13T12:53:40.357594",
+        "modified": "2025-12-19T18:20:58.070153",
         "level": 1
     },
     {
@@ -25,8 +25,8 @@
         "is_file": true,
         "is_dir": false,
         "is_link": false,
-        "size_bytes": 4903,
-        "modified": "2025-12-13T12:53:40.357594",
+        "size_bytes": 8552,
+        "modified": "2025-12-19T18:20:58.080485",
         "level": 1
     },
     {
@@ -36,7 +36,7 @@
         "is_dir": false,
         "is_link": false,
         "size_bytes": 684,
-        "modified": "2025-12-13T12:53:40.357594",
+        "modified": "2025-12-19T18:20:58.070153",
         "level": 1
     },
     {
@@ -45,18 +45,8 @@
         "is_file": true,
         "is_dir": false,
         "is_link": false,
-        "size_bytes": 5282,
-        "modified": "2025-12-13T12:53:40.357594",
-        "level": 1
-    },
-    {
-        "name": "utils.py",
-        "path": ".\\utils.py",
-        "is_file": true,
-        "is_dir": false,
-        "is_link": false,
-        "size_bytes": 130,
-        "modified": "2025-12-13T12:53:40.357594",
+        "size_bytes": 8392,
+        "modified": "2025-12-19T18:20:58.070153",
         "level": 1
     },
     {
@@ -66,7 +56,7 @@
         "is_dir": true,
         "is_link": false,
         "size_bytes": 4096,
-        "modified": "2025-12-13T12:53:40.357594",
+        "modified": "2025-12-19T18:20:58.080485",
         "level": 1
     },
     {
@@ -75,8 +65,38 @@
         "is_file": true,
         "is_dir": false,
         "is_link": false,
-        "size_bytes": 692,
-        "modified": "2025-12-13T12:54:07.862477",
+        "size_bytes": 610,
+        "modified": "2025-12-19T18:20:58.070153",
+        "level": 2
+    },
+    {
+        "name": "filtered_py_files.txt",
+        "path": ".\\examples\\filtered_py_files.txt",
+        "is_file": true,
+        "is_dir": false,
+        "is_link": false,
+        "size_bytes": 432,
+        "modified": "2025-12-19T18:20:58.070153",
+        "level": 2
+    },
+    {
+        "name": "keyword_filtered_files.txt",
+        "path": ".\\examples\\keyword_filtered_files.txt",
+        "is_file": true,
+        "is_dir": false,
+        "is_link": false,
+        "size_bytes": 254,
+        "modified": "2025-12-19T18:20:58.070153",
+        "level": 2
+    },
+    {
+        "name": "large_files.json",
+        "path": ".\\examples\\large_files.json",
+        "is_file": true,
+        "is_dir": false,
+        "is_link": false,
+        "size_bytes": 1047,
+        "modified": "2025-12-19T18:20:58.080485",
         "level": 2
     },
     {
@@ -85,8 +105,8 @@
         "is_file": true,
         "is_dir": false,
         "is_link": false,
-        "size_bytes": 2,
-        "modified": "2025-12-13T12:53:40.357594",
+        "size_bytes": 1897,
+        "modified": "2025-12-19T18:20:58.070153",
         "level": 2
     },
     {
@@ -95,8 +115,8 @@
         "is_file": true,
         "is_dir": false,
         "is_link": false,
-        "size_bytes": 2905,
-        "modified": "2025-12-13T12:55:27.917697",
+        "size_bytes": 2908,
+        "modified": "2025-12-19T18:20:58.080485",
         "level": 2
     },
     {
@@ -105,8 +125,37 @@
         "is_file": true,
         "is_dir": false,
         "is_link": false,
-        "size_bytes": 0,
-        "modified": "2025-12-13T12:54:19.335761",
+        "size_bytes": 256,
+        "modified": "2025-12-19T18:20:58.080485",
+        "level": 2
+    },
+    {
+        "name": "sorted_by_modified.txt",
+        "path": ".\\examples\\sorted_by_modified.txt",
+        "is_file": true,
+        "is_dir": false,
+        "is_link": false,
+        "size_bytes": 499,
+        "modified": "2025-12-19T18:20:58.080485",
+        "level": 2
+    },
+    {
+        "name": "sorted_by_name.txt",
+        "path": ".\\examples\\sorted_by_name.txt",
+        "is_file": true,
+        "is_dir": false,
+        "is_link": false,
+        "size_bytes": 699,
+        "modified": "2025-12-19T18:20:58.080485",
+        "level": 2
+    },
+    {
+        "name": "sorted_by_size.txt",
+        "path": ".\\examples\\sorted_by_size.txt",
+        "is_file": true,
+        "is_dir": false,
+        "is_link": false,
+        "size_bytes": 699,
+        "modified": "2025-12-19T18:20:58.080485",
         "level": 2
     }
-]
